@@ -3,13 +3,13 @@
 	"extends": ["@ivangabriele/biome-config"],
 	"linter": {
 		"ignore": [
-			"./__tests__/**",
 			"./.yarn/**",
-			"./assets/",
-			"./cypress/**",
-			"./src/**",
-			"./types/**",
-			"./commands.js",
+			"./packages/lib/__tests__/**",
+			"./packages/lib/assets/**",
+			"./packages/lib/src/**",
+			"./packages/lib/types/**",
+			"./packages/lib/commands.js",
+			"./packages/test/**",
 			"./package.json"
 		]
 	}

@@ -1,24 +1,13 @@
 {
-	"name": "@cypress-plugin-snapshots/root",
+	"name": "@cypress-plugin-snapshots/lib",
 	"description": "Cypress snapshot functionality for data",
 	"version": "1.4.4",
 	"license": "MIT",
 	"engine": {
 		"node": ">=20"
 	},
-	"workspaces": [
-		"packages/*"
-	],
 	"types": "types/index.d.ts",
 	"scripts": {
-		"cy:open": "yarn workspace cypress-plugin-snapshots-test run cy:open",
-		"cy:run": "yarn workspace cypress-plugin-snapshots-test run cy:run",
-		"cy:verify": "yarn workspace cypress-plugin-snapshots-test run cy:verify",
-		"jest": "jest",
-		"start": "node cypress/test-server/index.js",
-		"test:e2e": "yarn workspace cypress-plugin-snapshots-test run cy:run",
-		"test:lint": "biome check --files-ignore-unknown=true --no-errors-on-unmatched .",
-		"test:lint:fix": "biome check --write --files-ignore-unknown=true --no-errors-on-unmatched .",
 		"test:unit": "jest"
 	},
 	"dependencies": {
@@ -53,7 +42,6 @@
 	"peerDependencies": {
 		"cypress": "^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0"
 	},
-	"packageManager": "yarn@4.3.0",
 	"jest": {
 		"testPathIgnorePatterns": [
 			"<rootDir>/examples/",
