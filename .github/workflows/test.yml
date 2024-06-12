@@ -3,7 +3,25 @@ name: Test
 on: push
 
 jobs:
-  test:
+  unit_test:
+    name: Unit Test
+    runs-on: ubuntu-latest
+    container: cypress/browsers:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: yarn
+          node-version: 20
+      - name: Install
+        run: yarn --immutable
+      - name: Test
+        run: yarn test:unit
+
+  e2e_test:
+    name: E2E Test
     runs-on: ubuntu-latest
     container: cypress/browsers:latest
     steps:
@@ -20,7 +38,7 @@ jobs:
         run: |
           chmod o+w /__w/cypress-plugin-snapshots/cypress-plugin-snapshots/cypress
           ls -la /__w/cypress-plugin-snapshots/cypress-plugin-snapshots/cypress
-          npm run ci:test
+          yarn test:e2e
           kill $(jobs -p) || true
       - name: Archive Cypress snapshots
         uses: actions/upload-artifact@v1

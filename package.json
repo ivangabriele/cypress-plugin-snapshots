@@ -7,17 +7,16 @@
 		"node": ">=20"
 	},
 	"workspaces": ["cypress"],
-	"files": ["*.js", "*.md", "assets", "docs", "LICENSE", "src", "types"],
 	"types": "types/index.d.ts",
 	"scripts": {
-		"ci:test": "jest & npm --prefix cypress run ci:test",
-		"cy:open": "npm --prefix cypress run cy:open",
-		"cy:run": "npm --prefix cypress run cy:run",
-		"cy:verify": "npm --prefix cypress run cy:verify",
+		"cy:open": "yarn workspace cypress-plugin-snapshots-test run cy:open",
+		"cy:run": "yarn workspace cypress-plugin-snapshots-test run cy:run",
+		"cy:verify": "yarn workspace cypress-plugin-snapshots-test run cy:verify",
 		"jest": "jest",
-		"test:lint": "biome check --files-ignore-unknown=true --no-errors-on-unmatched .",
 		"start": "node cypress/test-server/index.js",
-		"test": "jest & npm --prefix cypress run cy:run"
+		"test:e2e": "yarn workspace cypress-plugin-snapshots-test run cy:run",
+		"test:lint": "biome check --files-ignore-unknown=true --no-errors-on-unmatched .",
+		"test:unit": "jest"
 	},
 	"dependencies": {
 		"diff2html": "2.7.0",
