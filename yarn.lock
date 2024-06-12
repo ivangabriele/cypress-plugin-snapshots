@@ -2595,7 +2595,7 @@ __metadata:
 
 "cypress-plugin-snapshots@file:../::locator=cypress-plugin-snapshots-test%40workspace%3Acypress":
   version: 1.4.4
-  resolution: "cypress-plugin-snapshots@file:../#../::hash=7b9259&locator=cypress-plugin-snapshots-test%40workspace%3Acypress"
+  resolution: "cypress-plugin-snapshots@file:../#../::hash=568890&locator=cypress-plugin-snapshots-test%40workspace%3Acypress"
   dependencies:
     diff2html: "npm:2.7.0"
     fs-extra: "npm:7.0.1"
@@ -2614,7 +2614,7 @@ __metadata:
     unidiff: "npm:1.0.2"
   peerDependencies:
     cypress: ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0
-  checksum: 10c0/7c8bff4d6d27aa710d970186acd2365ac26029906a58b874bb061f60ce37e5ea8182e177f5514415449780d42832d13172be1e41bbb77a2eb43f25cf83879024
+  checksum: 10c0/524ac7020d9ab4e23da91dcc398f36dfb50709145f5349b29b62b6a6b1d870b747cd927c09ec5308d1ed11fa11f052d9d99cc103a08f6bf18cec124c4353a1bb
   languageName: node
   linkType: hard
 
