@@ -9,7 +9,8 @@
 			"./cypress/**",
 			"./src/**",
 			"./types/**",
-			"./commands.js"
+			"./commands.js",
+			"./package.json"
 		]
 	}
 }
