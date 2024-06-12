@@ -9,8 +9,7 @@
 			"./packages/lib/src/**",
 			"./packages/lib/types/**",
 			"./packages/lib/commands.js",
-			"./packages/test/**",
-			"./package.json"
+			"./packages/test/**"
 		]
 	}
 }

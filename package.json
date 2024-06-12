@@ -3,23 +3,22 @@
 	"description": "Cypress snapshot functionality for data",
 	"version": "1.4.4",
 	"license": "MIT",
+	"private": true,
 	"engine": {
 		"node": ">=20"
 	},
 	"workspaces": [
 		"packages/*"
 	],
-	"types": "types/index.d.ts",
 	"scripts": {
-		"cy:open": "yarn workspace cypress-plugin-snapshots-test run cy:open",
-		"cy:run": "yarn workspace cypress-plugin-snapshots-test run cy:run",
-		"cy:verify": "yarn workspace cypress-plugin-snapshots-test run cy:verify",
-		"jest": "jest",
+		"cy:open": "yarn workspace @cypress-plugin-snapshots/test run cy:open",
+		"cy:run": "yarn workspace @cypress-plugin-snapshots/test run cy:run",
+		"cy:verify": "yarn workspace @cypress-plugin-snapshots/test run cy:verify",
 		"start": "node cypress/test-server/index.js",
-		"test:e2e": "yarn workspace cypress-plugin-snapshots-test run cy:run",
+		"test:e2e": "yarn workspace @cypress-plugin-snapshots/test run cy:run",
 		"test:lint": "biome check --files-ignore-unknown=true --no-errors-on-unmatched .",
 		"test:lint:fix": "biome check --write --files-ignore-unknown=true --no-errors-on-unmatched .",
-		"test:unit": "jest"
+		"test:unit": "yarn workspace @cypress-plugin-snapshots/lib run test:unit"
 	},
 	"dependencies": {
 		"diff2html": "2.7.0",
@@ -53,35 +52,5 @@
 	"peerDependencies": {
 		"cypress": "^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0"
 	},
-	"packageManager": "yarn@4.3.0",
-	"jest": {
-		"testPathIgnorePatterns": [
-			"<rootDir>/examples/",
-			"<rootDir>/node_modules/",
-			"<rootDir>/cypress/"
-		],
-		"clearMocks": true,
-		"testEnvironment": "node"
-	},
-	"author": "Meinaart van Straalen",
-	"contributors": [
-		{
-			"name": "Ivan Gabriele",
-			"email": "ivan.gabriele@protonmail.com",
-			"url": "https://www.ivangabriele.com"
-		}
-	],
-	"bugs": {
-		"url": "https://github.com/ivangabriele/cypress-plugin-snapshots/issues"
-	},
-	"homepage": "https://github.com/ivangabriele/cypress-plugin-snapshots",
-	"keywords": [
-		"cypress",
-		"cypress-io",
-		"cypress-plugin"
-	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/ivangabriele/cypress-plugin-snapshots.git"
-	}
+	"packageManager": "yarn@4.3.0"
 }
