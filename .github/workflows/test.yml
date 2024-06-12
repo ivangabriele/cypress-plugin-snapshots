@@ -3,37 +3,48 @@ name: Test
 on: push
 
 jobs:
-  test:
-    runs-on: ubuntu-22.04
+  unit_test:
+    name: Unit Test
+    runs-on: ubuntu-latest
     container: cypress/browsers:latest
-
-    strategy:
-      matrix:
-        node-version: [18]
-
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - name: Setup
-        uses: actions/setup-node@v3
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          cache: npm
-          node-version: ${{ matrix.node-version }}
+          cache: yarn
+          node-version: 20
       - name: Install
-        run: |
-          npm ci
-          npm --prefix cypress ci
-      - name: Lint
-        run: npm run lint
+        run: yarn --immutable
+      - name: Test
+        run: yarn test:unit
+
+  e2e_test:
+    name: E2E Test
+    runs-on: ubuntu-latest
+    container: cypress/browsers:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: yarn
+          node-version: 20
+      - name: Install
+        run: yarn --immutable
       - name: Test
         run: |
-          chmod o+w /__w/cypress-plugin-snapshots/cypress-plugin-snapshots/cypress
-          ls -la /__w/cypress-plugin-snapshots/cypress-plugin-snapshots/cypress
-          npm run ci:test
+          echo $PWD
+          chmod o+w .
+          ls -la .
+          yarn test:e2e
           kill $(jobs -p) || true
+        working-directory: ./packages/test
       - name: Archive Cypress snapshots
         uses: actions/upload-artifact@v1
         if: failure()
         with:
           name: cypress-snapshots
-          path: cypress/cypress/integration/__*snapshots__/*
+          path: packages/test/cypress/integration/__*snapshots__/*

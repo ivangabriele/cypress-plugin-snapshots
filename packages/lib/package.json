@@ -1,0 +1,75 @@
+{
+	"name": "@cypress-plugin-snapshots/lib",
+	"description": "Cypress snapshot functionality for data",
+	"version": "1.4.4",
+	"license": "MIT",
+	"engine": {
+		"node": ">=20"
+	},
+	"types": "types/index.d.ts",
+	"scripts": {
+		"test:unit": "jest"
+	},
+	"dependencies": {
+		"diff2html": "2.7.0",
+		"fs-extra": "7.0.1",
+		"image-size": "0.7.2",
+		"jimp": "0.16.1",
+		"js-base64": "2.5.1",
+		"lodash": "4.17.21",
+		"pixelmatch": "4.0.2",
+		"pngjs": "3.3.3",
+		"prettier": "1.16.4",
+		"rand-token": "1.0.1",
+		"rimraf": "2.6.3",
+		"sanitize-filename": "1.6.1",
+		"socket.io": "2.4.0",
+		"socket.io-client": "2.4.0",
+		"unidiff": "1.0.2"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.8.1",
+		"@ivangabriele/biome-config": "1.0.2",
+		"eslint": "5.14.1",
+		"eslint-config-airbnb-base": "13.1.0",
+		"eslint-config-prettier": "4.0.0",
+		"eslint-plugin-cypress": "2.2.1",
+		"eslint-plugin-import": "2.16.0",
+		"eslint-plugin-jest": "22.3.0",
+		"jest": "24.1.0",
+		"rewire": "4.0.1"
+	},
+	"peerDependencies": {
+		"cypress": "^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0"
+	},
+	"jest": {
+		"testPathIgnorePatterns": [
+			"<rootDir>/examples/",
+			"<rootDir>/node_modules/",
+			"<rootDir>/cypress/"
+		],
+		"clearMocks": true,
+		"testEnvironment": "node"
+	},
+	"author": "Meinaart van Straalen",
+	"contributors": [
+		{
+			"name": "Ivan Gabriele",
+			"email": "ivan.gabriele@protonmail.com",
+			"url": "https://www.ivangabriele.com"
+		}
+	],
+	"bugs": {
+		"url": "https://github.com/ivangabriele/cypress-plugin-snapshots/issues"
+	},
+	"homepage": "https://github.com/ivangabriele/cypress-plugin-snapshots",
+	"keywords": [
+		"cypress",
+		"cypress-io",
+		"cypress-plugin"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ivangabriele/cypress-plugin-snapshots.git"
+	}
+}

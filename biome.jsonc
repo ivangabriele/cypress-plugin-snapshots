@@ -1,0 +1,18 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.8.0/schema.json",
+	"extends": ["@ivangabriele/biome-config"],
+	"formatter": {
+		"ignore": ["./package.json"]
+	},
+	"linter": {
+		"ignore": [
+			"./.yarn/**",
+			"./packages/lib/__tests__/**",
+			"./packages/lib/assets/**",
+			"./packages/lib/src/**",
+			"./packages/lib/types/**",
+			"./packages/lib/commands.js",
+			"./packages/test/**"
+		]
+	}
+}
