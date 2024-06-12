@@ -36,13 +36,15 @@ jobs:
         run: yarn --immutable
       - name: Test
         run: |
-          chmod o+w /__w/cypress-plugin-snapshots/cypress-plugin-snapshots/cypress
-          ls -la /__w/cypress-plugin-snapshots/cypress-plugin-snapshots/cypress
+          echo $PWD
+          chmod o+w .
+          ls -la .
           yarn test:e2e
           kill $(jobs -p) || true
+        working-directory: ./packages/test
       - name: Archive Cypress snapshots
         uses: actions/upload-artifact@v1
         if: failure()
         with:
           name: cypress-snapshots
-          path: cypress/cypress/integration/__*snapshots__/*
+          path: packages/test/cypress/integration/__*snapshots__/*
