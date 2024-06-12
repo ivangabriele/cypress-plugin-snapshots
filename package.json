@@ -7,15 +7,7 @@
 		"node": ">=18",
 		"npm": ">=8"
 	},
-	"files": [
-		"*.js",
-		"*.md",
-		"assets",
-		"docs",
-		"LICENSE",
-		"src",
-		"types"
-	],
+	"files": ["*.js", "*.md", "assets", "docs", "LICENSE", "src", "types"],
 	"types": "types/index.d.ts",
 	"scripts": {
 		"ci:test": "jest & npm --prefix cypress run ci:test",
@@ -23,7 +15,7 @@
 		"cy:run": "npm --prefix cypress run cy:run",
 		"cy:verify": "npm --prefix cypress run cy:verify",
 		"jest": "jest",
-		"test:lint": "biome check --apply --files-ignore-unknown=true --no-errors-on-unmatched .",
+		"test:lint": "biome check --files-ignore-unknown=true --no-errors-on-unmatched .",
 		"start": "node cypress/test-server/index.js",
 		"test": "jest & npm --prefix cypress run cy:run"
 	},
@@ -81,11 +73,7 @@
 		"url": "https://github.com/ivangabriele/cypress-plugin-snapshots/issues"
 	},
 	"homepage": "https://github.com/ivangabriele/cypress-plugin-snapshots",
-	"keywords": [
-		"cypress",
-		"cypress-io",
-		"cypress-plugin"
-	],
+	"keywords": ["cypress", "cypress-io", "cypress-plugin"],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ivangabriele/cypress-plugin-snapshots.git"

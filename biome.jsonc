@@ -2,6 +2,14 @@
 	"$schema": "https://biomejs.dev/schemas/1.8.0/schema.json",
 	"extends": ["@ivangabriele/biome-config"],
 	"linter": {
-		"ignore": ["./.yarn/**", "./assets/", "./cypress/**", "./src", "./types"]
+		"ignore": [
+			"./__tests__/**",
+			"./.yarn/**",
+			"./assets/",
+			"./cypress/**",
+			"./src/**",
+			"./types/**",
+			"./commands.js"
+		]
 	}
 }

@@ -17,7 +17,7 @@ function initPlugin(on, globalConfig = {}) {
 	// That's why the config is stringified and parsed again in `src/utils/commands/getConfig.js#fixConfig`.
 	globalConfig.env[CONFIG_KEY] = JSON.stringify(config)
 
-	on("before:browser:launch", (browser = {}, launchOptions) => {
+	on("before:browser:launch", (browser, launchOptions) => {
 		const args = Array.isArray(launchOptions)
 			? launchOptions
 			: launchOptions.args
