@@ -127,5 +127,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/ivangabriele/cypress-plugin-snapshots.git"
-  }
+  },
+  "packageManager": "yarn@4.3.0"
 }
