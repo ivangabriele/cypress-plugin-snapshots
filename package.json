@@ -4,10 +4,20 @@
 	"version": "1.4.4",
 	"license": "MIT",
 	"engine": {
-		"node": ">=18",
-		"npm": ">=8"
+		"node": ">=20"
 	},
-	"files": ["*.js", "*.md", "assets", "docs", "LICENSE", "src", "types"],
+	"workspaces": [
+		"cypress"
+	],
+	"files": [
+		"*.js",
+		"*.md",
+		"assets",
+		"docs",
+		"LICENSE",
+		"src",
+		"types"
+	],
 	"types": "types/index.d.ts",
 	"scripts": {
 		"ci:test": "jest & npm --prefix cypress run ci:test",
@@ -73,7 +83,11 @@
 		"url": "https://github.com/ivangabriele/cypress-plugin-snapshots/issues"
 	},
 	"homepage": "https://github.com/ivangabriele/cypress-plugin-snapshots",
-	"keywords": ["cypress", "cypress-io", "cypress-plugin"],
+	"keywords": [
+		"cypress",
+		"cypress-io",
+		"cypress-plugin"
+	],
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/ivangabriele/cypress-plugin-snapshots.git"
