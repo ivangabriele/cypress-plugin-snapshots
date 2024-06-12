@@ -1,11 +1,9 @@
 {
 	"name": "@cypress-plugin-snapshots/test",
 	"description": "Example setup for cypress-plugin-snapshots",
-	"version": "1.1.0",
+	"version": "1.4.4",
 	"license": "MIT",
-	"engine": {
-		"node": ">=20"
-	},
+	"private": true,
 	"scripts": {
 		"ci:test": "start-server-and-test start http://localhost:8080 test",
 		"cy:open": "cypress open",

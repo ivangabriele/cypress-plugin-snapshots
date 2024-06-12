@@ -20,23 +20,6 @@
 		"test:lint:fix": "biome check --write --files-ignore-unknown=true --no-errors-on-unmatched .",
 		"test:unit": "yarn workspace @cypress-plugin-snapshots/lib run test:unit"
 	},
-	"dependencies": {
-		"diff2html": "2.7.0",
-		"fs-extra": "7.0.1",
-		"image-size": "0.7.2",
-		"jimp": "0.16.1",
-		"js-base64": "2.5.1",
-		"lodash": "4.17.21",
-		"pixelmatch": "4.0.2",
-		"pngjs": "3.3.3",
-		"prettier": "1.16.4",
-		"rand-token": "1.0.1",
-		"rimraf": "2.6.3",
-		"sanitize-filename": "1.6.1",
-		"socket.io": "2.4.0",
-		"socket.io-client": "2.4.0",
-		"unidiff": "1.0.2"
-	},
 	"devDependencies": {
 		"@biomejs/biome": "1.8.1",
 		"@ivangabriele/biome-config": "1.0.2",
@@ -48,9 +31,6 @@
 		"eslint-plugin-jest": "22.3.0",
 		"jest": "24.1.0",
 		"rewire": "4.0.1"
-	},
-	"peerDependencies": {
-		"cypress": "^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0"
 	},
 	"packageManager": "yarn@4.3.0"
 }

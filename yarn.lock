@@ -421,31 +421,14 @@ __metadata:
   dependencies:
     "@biomejs/biome": "npm:1.8.1"
     "@ivangabriele/biome-config": "npm:1.0.2"
-    diff2html: "npm:2.7.0"
     eslint: "npm:5.14.1"
     eslint-config-airbnb-base: "npm:13.1.0"
     eslint-config-prettier: "npm:4.0.0"
     eslint-plugin-cypress: "npm:2.2.1"
     eslint-plugin-import: "npm:2.16.0"
     eslint-plugin-jest: "npm:22.3.0"
-    fs-extra: "npm:7.0.1"
-    image-size: "npm:0.7.2"
     jest: "npm:24.1.0"
-    jimp: "npm:0.16.1"
-    js-base64: "npm:2.5.1"
-    lodash: "npm:4.17.21"
-    pixelmatch: "npm:4.0.2"
-    pngjs: "npm:3.3.3"
-    prettier: "npm:1.16.4"
-    rand-token: "npm:1.0.1"
     rewire: "npm:4.0.1"
-    rimraf: "npm:2.6.3"
-    sanitize-filename: "npm:1.6.1"
-    socket.io: "npm:2.4.0"
-    socket.io-client: "npm:2.4.0"
-    unidiff: "npm:1.0.2"
-  peerDependencies:
-    cypress: ^10.0.0 || ^11.0.0 || ^12.0.0 || ^13.0.0
   languageName: unknown
   linkType: soft
 
